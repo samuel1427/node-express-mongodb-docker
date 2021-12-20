@@ -1,0 +1,21 @@
+version: '3'
+services:
+  node-express:
+    container_name: node-express
+    build: .
+    ports:
+      - 8080:8080
+    networks:
+    - nodeapp-network
+    depends_on:
+      - mongodb
+  monogodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - nodeapp-network
+networks:
+  nodeapp-network:
+    driver: bridge

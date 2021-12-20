@@ -44,3 +44,8 @@ npm install
 ```
 node server.js
 ```
+
+### Docker-compose 
+```
+docker-compose up
+```
